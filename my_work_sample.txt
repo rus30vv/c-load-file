@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(int argc, char* argv[])
+{
+	unsigned int a, b;
+	//unsigned char;
+    char *string1;
+    char *string2;
+    char *string3;
+    string2 = "/home/project_tcc/decode.txt";
+    string1 = "/home/project_tcc/noEncode.txt";
+    string2 = "/home/project_tcc/Encode.txt";
+	FILE *exitst;
+	//
+    exitst = fopen(string1, "r");
+    if (exitst != NULL){
+    	printf("file_opned:\n");
+		while(a != -1)
+		{
+
+		
+		a  = fgetc(exitst);
+		b = a;
+		printf("%d", a);
+		//printf(" - ");
+		
+		
+		
+		//printf("%d", b);
+		//printf("\t");
+		//b = fputc(-1, new);	
+		}
+		//
+
+	}
+	
+	
+	printf("\nFile_closed: \n");
+
+		
+ 
+    return 0;
+}
