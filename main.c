@@ -1,8 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void exitst_file(char *nameFile)
+{
+    FILE *DiscriptorFileExisting;
+    
+    if ((DiscriptorFileExisting = fopen(nameFile,"r")) !=NULL)
+    {
+        printf("\n\t***FILE_EXITS\n");
+        fclose(DiscriptorFileExisting);
+        //
+        nameFile = NULL;free(nameFile);
+    }
+    else
+    {
+        printf("\n\t***NONE_FILE\n");
+        exit(EXIT_FAILURE);
+    }
+};
 
-int main()
+int main()//no try if not arg
 {	
     printf("\n\tStart point main");
     
@@ -13,6 +30,9 @@ int main()
     printf("\n\tintitial value programm End");
 
     char *filenameR = "/home/runner/c-load-file/text.txt";
+    //
+    exitst_file(filenameR);
+    //
     Floader = fopen(filenameR, "r");
     
     printf("\n\tintitial string text loader End\n");
